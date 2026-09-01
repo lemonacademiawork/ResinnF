@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 
 const faqs = [
   {
-    q: 'Do I need prior experience?',
-    a: 'Absolutely not. Our masterclass is designed to take you from the very basics (Phase 1) all the way to advanced techniques (Phase 2 & 3).'
+    q: 'Do I need prior experience to join?',
+    a: 'Absolutely not. Our masterclass is carefully structured to take you from the very basics (resin mixing, ratios & bubble-free pouring) all the way to advanced geode art, ocean waves, and custom keepsakes.'
   },
   {
-    q: 'What materials are required?',
-    a: "You'll need wax, wicks, fragrance oils, and some basic kitchen tools. We provide a comprehensive list of recommended kits and suppliers within the first module."
+    q: 'What materials are required for the workshop?',
+    a: "You'll need Epoxy Resin & Hardener (2:1 or 3:1), silicone molds, pigments/mica powder, mixing cups, wooden sticks, and safety gloves. We provide complete wholesaler vendor details and a starter material checklist right inside the first session."
   },
   {
-    q: 'How long do I have access?',
-    a: 'Once you enroll, you have lifetime access to the curriculum, including any future updates and community discussions.'
+    q: 'How long do I have access to the recordings & support?',
+    a: 'Once you enroll, you get lifetime access to all session recordings, downloadable resources, future updates, and dedicated trainer support.'
   },
   {
-    q: 'Is there a certification?',
-    a: 'Yes! Upon completing the 12-day curriculum and submitting your final project, you will receive a digital Lemon Academia Certificate.'
+    q: 'Will I receive a verified certificate?',
+    a: 'Yes! Upon completing the curriculum and making your projects, you will receive a verified digital Lemon Academia Completion Certificate.'
   }
 ];
 

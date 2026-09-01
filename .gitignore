@@ -1,0 +1,21 @@
+# dependencies
+/node_modules
+/.pnpm
+/.yarn
+
+# production
+/dist
+/dist-ssr
+
+# local env files
+*.local
+.env.local
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# OS / Editor
+.DS_Store
+.vscode

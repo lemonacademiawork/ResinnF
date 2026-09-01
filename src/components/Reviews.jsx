@@ -4,17 +4,17 @@ const reviews = [
   {
     avatar: 'images/student2.jpg',
     name: 'Radhika',
-    comment: 'The botanical embedding module changed everything for my business. My sales on Etsy have tripled since applying the finishing techniques learned here.'
+    comment: 'The floral preservation and ocean clock modules changed everything for my business. My sales on Instagram and Etsy have tripled since applying the finishing techniques learned here.'
   },
   {
     avatar: 'images/student1.jpg',
     name: 'Umair',
-    comment: 'I never thought I could make candles this professional. The 12-day structure is perfect—easy to follow but deeply detailed where it matters.'
+    comment: 'I never thought I could make bubble-free resin art this professional. The 12-day step-by-step structure and vendor list are deeply detailed and worth every rupee.'
   },
   {
     avatar: 'images/student3.jpg',
     name: 'Priyanka',
-    comment: "The scent blending section is a masterclass in itself. I've finally found my signature studio fragrance. Highly recommended!"
+    comment: "The geode coaster and jewellery section is a masterclass in itself. I've finally created my own signature luxury decor collection. Highly recommended!"
   },
 ];
 

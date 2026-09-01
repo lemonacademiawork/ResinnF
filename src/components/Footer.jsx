@@ -12,7 +12,7 @@ export default function Footer() {
               </div>
               <span className="font-display-lg text-headline-md text-primary">Lemon Academia</span>
             </div>
-            <p className="text-on-surface-variant text-sm leading-relaxed">Handcrafted with passion for the modern artist. Master the art of luxury candle making.</p>
+            <p className="text-on-surface-variant text-sm leading-relaxed">Handcrafted with passion for the modern artist. Master the art of luxury resin crafting and custom decor.</p>
           </div>
           <div>
             <h4 className="font-bold text-on-surface mb-6">Course</h4>
@@ -33,9 +33,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-on-surface mb-6">Connect With Us</h4>
             <ul className="space-y-4 text-sm text-on-surface-variant">
-              <li><a className="hover:text-primary transition-colors" href="https://www.instagram.com/lemon_academia___?igsh=bHpoN2dlOHU4eGdq">Instagram</a></li>
-              <li><a className="hover:text-primary transition-colors" href="https://www.youtube.com/@Lemonacademia_in">Youtube</a></li>
-              <li><a className="hover:text-primary transition-colors" href="https://www.facebook.com/share/18uE5qyVBg/">Facebook</a></li>
+              <li><a className="hover:text-primary transition-colors" href="https://www.instagram.com/lemon_academia__?igsh=MW91bmp1eDN6N2xhbA==" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+              <li><a className="hover:text-primary transition-colors" href="https://www.youtube.com/@Lemonacademia_in" target="_blank" rel="noopener noreferrer">Youtube</a></li>
+              <li><a className="hover:text-primary transition-colors" href="https://whatsapp.com/channel/0029VbBY7JXFMqrOLLRraZ3m" target="_blank" rel="noopener noreferrer">WhatsApp Channel</a></li>
+              <li><a className="hover:text-primary transition-colors" href="https://www.facebook.com/share/18uE5qyVBg/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
             </ul>
           </div>
         </div>
