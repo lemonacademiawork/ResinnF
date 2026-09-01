@@ -3,10 +3,6 @@
 /.pnpm
 /.yarn
 
-# production
-/dist
-/dist-ssr
-
 # local env files
 .env
 .env.*
