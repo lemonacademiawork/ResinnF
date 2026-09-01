@@ -8,6 +8,9 @@
 /dist-ssr
 
 # local env files
+.env
+.env.*
+*.env
 *.local
 .env.local
 
