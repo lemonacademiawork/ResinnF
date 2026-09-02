@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Payment from './Payment';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://backend-production-e6d7.up.railway.app';
+const rawBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://candlepage-production.up.railway.app';
+const API_BASE_URL = rawBaseUrl.replace(/\/+$/, '');
 
 export default function BookingModal({ isOpen, onClose, selectedTier }) {
   const [name, setName] = useState('');

@@ -1,6 +1,7 @@
 import React from 'react';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://backend-production-e6d7.up.railway.app';
+const rawBaseUrl = import.meta.env.VITE_API_BASE_URL || 'https://candlepage-production.up.railway.app';
+const API_BASE_URL = rawBaseUrl.replace(/\/+$/, '');
 
 const loadRazorpayScript = () => {
   return new Promise((resolve) => {
@@ -48,34 +49,56 @@ export default function Payment({
     const isClientOrder = orderData?.orderId && orderData.orderId.startsWith('RESIN_');
     const amountVal = orderData?.amount ? Math.round(orderData.amount * 100) : 24900;
 
+    const logoUrl = typeof window !== 'undefined' ? `${window.location.origin}/images/logo.png` : '/images/logo.png';
+
     const options = {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_live_T0cB0EYllXBVHc',
       amount: amountVal,
       currency: orderData?.currency || 'INR',
       name: 'Lemon Academia',
       description: getTierTitle ? getTierTitle() : 'Resin Art Course',
-      image: `${import.meta.env.BASE_URL}images/logo.png`,
+      image: logoUrl,
       ...(isClientOrder ? {} : (orderData?.orderId ? { order_id: orderData.orderId } : {})),
       handler: async function (paymentResponse) {
         setIsProcessing(true);
         setApiError('');
         try {
           if (API_BASE_URL) {
+            const rzpOrderId = paymentResponse.razorpay_order_id || orderData?.orderId || orderId;
+            const rzpPayId = paymentResponse.razorpay_payment_id;
+            const rzpSig = paymentResponse.razorpay_signature;
+
             await fetch(`${API_BASE_URL}/api/payment/verify`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
               },
               body: JSON.stringify({
-                orderId: paymentResponse.razorpay_order_id || orderData?.orderId || orderId,
-                paymentId: paymentResponse.razorpay_payment_id,
-                signature: paymentResponse.razorpay_signature,
+                orderId: rzpOrderId,
+                paymentId: rzpPayId,
+                signature: rzpSig,
+                razorpayOrderId: rzpOrderId,
+                razorpayPaymentId: rzpPayId,
+                razorpaySignature: rzpSig,
+                razorpay_order_id: rzpOrderId,
+                razorpay_payment_id: rzpPayId,
+                razorpay_signature: rzpSig,
+                email: email ? email.trim() : '',
+                phone: phone ? phone.trim() : '',
+                name: name ? name.trim() : '',
               }),
-            }).catch(() => null);
+            }).catch((verifyErr) => {
+              console.warn('Backend verification call error:', verifyErr);
+            });
           }
         } catch (_) {}
         setStep('success');
         setIsProcessing(false);
+      },
+      modal: {
+        ondismiss: function () {
+          setIsProcessing(false);
+        },
       },
       prefill: {
         name: name ? name.trim() : '',
@@ -94,7 +117,8 @@ export default function Payment({
       });
       rzp.open();
     } catch (err) {
-      setApiError('Failed to initialize Razorpay checkout popup.');
+      console.error('Razorpay open error:', err);
+      setApiError('Failed to initialize Razorpay checkout popup. Please try again.');
     } finally {
       setIsProcessing(false);
     }
