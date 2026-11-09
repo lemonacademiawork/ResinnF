@@ -82,7 +82,7 @@ export default function BookingModal({ isOpen, onClose, selectedTier }) {
         setIsProcessing(false);
       }
     } else {
-      const amount = tier === 'basic' ? 249 : 1896;
+      const amount = tier === 'basic' ? 299 : 1896;
       try {
         let serverOrder = null;
         try {
@@ -130,7 +130,7 @@ export default function BookingModal({ isOpen, onClose, selectedTier }) {
 
 
   const getTierPrice = () => {
-    if (tier === 'basic') return '₹249';
+    if (tier === 'basic') return '₹299';
     if (tier === 'advanced') return '₹1896';
     return 'Free';
   };
@@ -221,7 +221,7 @@ export default function BookingModal({ isOpen, onClose, selectedTier }) {
                 {selectedTier ? (
                   <div className="w-full px-4 py-3 bg-surface-container-low border border-outline-variant/30 rounded-xl text-on-surface font-semibold">
                     {tier === 'discovery' && 'Book a Call'}
-                    {tier === 'basic' && '4 Days - ₹249'}
+                    {tier === 'basic' && '4 Days - ₹299'}
                     {tier === 'advanced' && '14 Days - ₹1896'}
                   </div>
                 ) : (
@@ -233,7 +233,7 @@ export default function BookingModal({ isOpen, onClose, selectedTier }) {
                     className="w-full px-4 py-3 bg-surface border border-outline-variant/30 rounded-xl focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all disabled:opacity-60"
                   >
                     <option value="discovery">Book a Call</option>
-                    <option value="basic">4 Days - ₹249</option>
+                    <option value="basic">4 Days - ₹299</option>
                     <option value="advanced">14 Days - ₹1896</option>
                   </select>
                 )}

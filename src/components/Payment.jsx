@@ -47,7 +47,7 @@ export default function Payment({
     }
 
     const isClientOrder = orderData?.orderId && orderData.orderId.startsWith('RESIN_');
-    const amountVal = orderData?.amount ? Math.round(orderData.amount * 100) : 24900;
+    const amountVal = orderData?.amount ? Math.round(orderData.amount * 100) : 29900;
 
     const logoUrl = typeof window !== 'undefined' ? `${window.location.origin}/images/logo.png` : '/images/logo.png';
 

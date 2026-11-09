@@ -70,7 +70,7 @@ export default function CourseModules({ onOpenModal }) {
 
           <div className="mt-8 pt-6 border-t border-outline-variant/20">
             <div className="flex items-baseline gap-2 mb-4">
-              <span className="text-headline-md text-primary font-bold text-3xl">₹249</span>
+              <span className="text-headline-md text-primary font-bold text-3xl">₹299</span>
               <span className="text-body-md text-on-surface-variant line-through opacity-60">₹499</span>
             </div>
             <button onClick={() => onOpenModal('basic')} className="w-full bg-primary text-on-primary px-6 py-3.5 rounded-full font-label-md text-label-md hover:scale-102 transition-all active:scale-95 btn-primary-shadow">
