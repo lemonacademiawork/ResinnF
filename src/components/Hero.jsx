@@ -63,7 +63,7 @@ export default function Hero({ onOpenModal }) {
               </button>
 
               <a 
-                href="https://chat.whatsapp.com/ES0QItGUOS1CmuhyLkIFZ7" 
+                href="https://wa.me/917905713069?text=Hi%2C%20I%20am%20interested%20in%20the%20Resin%20Art%20Course" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-surface/90 backdrop-blur-md border-2 border-secondary text-secondary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-secondary hover:text-white transition-all flex items-center justify-center gap-2 group shadow-xs font-semibold"

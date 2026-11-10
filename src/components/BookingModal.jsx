@@ -333,8 +333,8 @@ export default function BookingModal({ isOpen, onClose, selectedTier }) {
               </>
             )}
 
-            <a href="https://chat.whatsapp.com/ES0QItGUOS1CmuhyLkIFZ7" target="_blank" rel="noopener noreferrer" className="inline-block bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md btn-primary-shadow hover:scale-105 transition-all">
-              Join WhatsApp Group
+            <a href="https://wa.me/917905713069?text=Hi%2C%20I%20have%20enrolled%20in%20the%20Resin%20Art%20Course.%20Please%20add%20me%20to%20the%20group." target="_blank" rel="noopener noreferrer" className="inline-block bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md btn-primary-shadow hover:scale-105 transition-all">
+              Connect on WhatsApp
             </a>
           </div>
         )}
