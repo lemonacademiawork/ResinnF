@@ -3,9 +3,9 @@ import React from 'react';
 export default function Hero({ onOpenModal }) {
   return (
     <section className="relative min-h-[85vh] pt-28 pb-16 flex items-center overflow-hidden bg-surface">
-      
+
       {/* Background Image across entire Hero width */}
-      <div 
+      <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-all duration-700 scale-105"
         style={{ backgroundImage: `url(${import.meta.env.BASE_URL}images/artisan.jpg)` }}
       ></div>
@@ -16,7 +16,7 @@ export default function Hero({ onOpenModal }) {
 
       <div className="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
+
           {/* Left Column: Heading & Value Proposition overlay */}
           <div className="lg:col-span-7 space-y-6 text-left max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container/30 backdrop-blur-md border border-primary/30 text-primary text-xs md:text-sm font-semibold">
@@ -54,18 +54,18 @@ export default function Hero({ onOpenModal }) {
 
             {/* Action Buttons & Special Pricing */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <button 
-                onClick={() => onOpenModal('discovery')} 
+              <button
+                onClick={() => onOpenModal('discovery')}
                 className="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:scale-105 transition-all active:scale-95 btn-primary-shadow flex items-center justify-center gap-2 shadow-lg"
               >
                 <span className="material-symbols-outlined">calendar_today</span>
                 Book a Call / Enroll
               </button>
 
-              <a 
-                href="https://wa.me/917905713069?text=Hi%2C%20I%20am%20interested%20in%20the%20Resin%20Art%20Course" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://wa.me/917905713069?text=Hi%2C%20I%20am%20interested%20in%20the%20Resin%20Art%20Course"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-surface/90 backdrop-blur-md border-2 border-secondary text-secondary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-secondary hover:text-white transition-all flex items-center justify-center gap-2 group shadow-xs font-semibold"
               >
                 <svg className="w-5 h-5 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24" aria-hidden="true">
